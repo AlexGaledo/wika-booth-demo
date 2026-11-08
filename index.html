@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>Wika PH — Booth Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <div class="topbar">
+      <button class="icon-btn" id="btn-back" title="Back">&#10094;</button>
+      <div class="title" id="title-text">Wika PH</div>
+      <div id="title-right" style="width:36px;"></div>
+    </div>
+
+    <!-- Home -->
+    <div class="screen active" id="screen-home">
+      <div class="eyebrow">PHSW 2026 · Booth Demo</div>
+      <img class="mascot" src="wika-mascot.png" alt="Wika mascot" />
+      <h1>Wika Booth Demo</h1>
+      <p class="home-subtitle">Pick a mode to try Tagalog, Cebuano &amp; Ilocano</p>
+      <div class="home-buttons">
+        <button class="big-btn primary" id="btn-translator">🗣️ Dialecto Translator</button>
+        <button class="big-btn secondary" id="btn-game">🎯 Guess the Language</button>
+      </div>
+    </div>
+
+    <!-- Translator: phrase picker -->
+    <div class="screen" id="screen-translator">
+      <div class="dialect-tabs" id="dialect-tabs"></div>
+      <div class="phrase-list" id="phrase-list"></div>
+    </div>
+
+    <!-- Translator: mascot speaks -->
+    <div class="screen" id="screen-speak">
+      <img class="mascot" src="wika-mascot.png" alt="Wika mascot" />
+      <div class="speech-bubble">
+        <div class="target" id="speak-target"></div>
+        <div class="gloss" id="speak-gloss"></div>
+      </div>
+      <button class="big-btn primary" id="btn-speak-back" style="max-width:280px;">Try another phrase</button>
+    </div>
+
+    <!-- Guess the Language -->
+    <div class="screen" id="screen-game">
+      <div class="game-header">
+        <div class="game-progress" id="game-progress">0/25</div>
+      </div>
+      <div class="grid" id="game-grid"></div>
+      <div class="answer-panel" id="answer-panel" style="display:none;">
+        <div class="answer-phrase">
+          <div class="target" id="answer-target"></div>
+          <div class="gloss" id="answer-gloss" style="display:none;"></div>
+        </div>
+        <div class="choices" id="answer-choices"></div>
+      </div>
+      <div class="done-screen" id="game-done" style="display:none;">
+        <h2>Nailed all 25! 🎉</h2>
+        <button class="big-btn primary" id="btn-restart" style="max-width:240px;">Play again</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="phrases.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
