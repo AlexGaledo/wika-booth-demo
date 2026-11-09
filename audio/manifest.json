@@ -1,0 +1,950 @@
+{
+  "a.mp3": {
+    "word": "A",
+    "text": "ah"
+  },
+  "ako.mp3": {
+    "word": "ako",
+    "text": "ako"
+  },
+  "ang.mp3": {
+    "word": "ang",
+    "text": "ang"
+  },
+  "anim.mp3": {
+    "word": "anim",
+    "text": "anim"
+  },
+  "ano.mp3": {
+    "word": "ano",
+    "text": "ano"
+  },
+  "apat.mp3": {
+    "word": "apat",
+    "text": "apat"
+  },
+  "aral.mp3": {
+    "word": "aral",
+    "text": "aral"
+  },
+  "araw.mp3": {
+    "word": "araw",
+    "text": "araw"
+  },
+  "aro.mp3": {
+    "word": "aro",
+    "text": "aro"
+  },
+  "aso.mp3": {
+    "word": "aso",
+    "text": "aso"
+  },
+  "aso_end.mp3": {
+    "word": "asó",
+    "text": "a, so"
+  },
+  "asul.mp3": {
+    "word": "asul",
+    "text": "asul"
+  },
+  "at.mp3": {
+    "word": "at",
+    "text": "at"
+  },
+  "ate.mp3": {
+    "word": "ate",
+    "text": "ah-teh"
+  },
+  "b.mp3": {
+    "word": "B",
+    "text": "bi"
+  },
+  "baba.mp3": {
+    "word": "baba",
+    "text": "baba"
+  },
+  "baba_glottal.mp3": {
+    "word": "baba'",
+    "text": "bah-bah"
+  },
+  "bahay.mp3": {
+    "word": "bahay",
+    "text": "bahay"
+  },
+  "bait.mp3": {
+    "word": "bait",
+    "text": "ba-eat"
+  },
+  "bakit.mp3": {
+    "word": "bakit",
+    "text": "bakit"
+  },
+  "barkada.mp3": {
+    "word": "barkada",
+    "text": "barkada"
+  },
+  "basa.mp3": {
+    "word": "basa",
+    "text": "basa"
+  },
+  "basa_glottal.mp3": {
+    "word": "basâ",
+    "text": "bah-sah"
+  },
+  "bata.mp3": {
+    "word": "bata",
+    "text": "bata"
+  },
+  "bata_glottal.mp3": {
+    "word": "bata'",
+    "text": "bah-tah"
+  },
+  "berde.mp3": {
+    "word": "berde",
+    "text": "berde"
+  },
+  "bili.mp3": {
+    "word": "bili",
+    "text": "bili"
+  },
+  "bola.mp3": {
+    "word": "bola",
+    "text": "bola"
+  },
+  "buhay_end.mp3": {
+    "word": "buháy",
+    "text": "boo-high"
+  },
+  "buhay.mp3": {
+    "word": "búhay",
+    "text": "buhay"
+  },
+  "dalawa.mp3": {
+    "word": "dalawa",
+    "text": "dalawa"
+  },
+  "dalawampu.mp3": {
+    "word": "dalawampu",
+    "text": "dalawampu"
+  },
+  "dilaw.mp3": {
+    "word": "dilaw",
+    "text": "dilaw"
+  },
+  "diretso.mp3": {
+    "word": "Diretso",
+    "text": "Diretso"
+  },
+  "e.mp3": {
+    "word": "E",
+    "text": "eh"
+  },
+  "elepante.mp3": {
+    "word": "elepante",
+    "text": "elepante"
+  },
+  "galang.mp3": {
+    "word": "galang",
+    "text": "galang"
+  },
+  "ganda.mp3": {
+    "word": "ganda",
+    "text": "ganda"
+  },
+  "gawa.mp3": {
+    "word": "gawa",
+    "text": "gawa"
+  },
+  "glaro.mp3": {
+    "word": "glaro",
+    "text": "glaro"
+  },
+  "hindi.mp3": {
+    "word": "hindi",
+    "text": "hindi"
+  },
+  "hiya.mp3": {
+    "word": "hiya",
+    "text": "hiya"
+  },
+  "i.mp3": {
+    "word": "I",
+    "text": "eeh"
+  },
+  "ibig.mp3": {
+    "word": "ibig",
+    "text": "ibig"
+  },
+  "ikaw.mp3": {
+    "word": "ikaw",
+    "text": "ikaw"
+  },
+  "ilong.mp3": {
+    "word": "ilong",
+    "text": "ilong"
+  },
+  "init.mp3": {
+    "word": "init",
+    "text": "init"
+  },
+  "inom.mp3": {
+    "word": "inom",
+    "text": "inom"
+  },
+  "isa.mp3": {
+    "word": "isa",
+    "text": "isa"
+  },
+  "isda.mp3": {
+    "word": "isda",
+    "text": "isda"
+  },
+  "itim.mp3": {
+    "word": "itim",
+    "text": "itim"
+  },
+  "ka.mp3": {
+    "word": "ka",
+    "text": "ka"
+  },
+  "kaibigan.mp3": {
+    "word": "kaibigan",
+    "text": "kaibigan"
+  },
+  "kailan.mp3": {
+    "word": "kailan",
+    "text": "kailan"
+  },
+  "kain.mp3": {
+    "word": "kain",
+    "text": "kain"
+  },
+  "kalabaw.mp3": {
+    "word": "kalabaw",
+    "text": "kalabaw"
+  },
+  "kama.mp3": {
+    "word": "kama",
+    "text": "kama"
+  },
+  "kamatis.mp3": {
+    "word": "kamatis",
+    "text": "kamatis"
+  },
+  "kami.mp3": {
+    "word": "kami",
+    "text": "kami"
+  },
+  "kapatid.mp3": {
+    "word": "kapatid",
+    "text": "kapatid"
+  },
+  "kasi.mp3": {
+    "word": "kasi",
+    "text": "kasi"
+  },
+  "kotse.mp3": {
+    "word": "kotse",
+    "text": "kotse"
+  },
+  "kumain.mp3": {
+    "word": "kumain",
+    "text": "kumain"
+  },
+  "kumakain.mp3": {
+    "word": "Kumakain",
+    "text": "Kumakain"
+  },
+  "kumusta.mp3": {
+    "word": "kumusta",
+    "text": "kumusta"
+  },
+  "kuya.mp3": {
+    "word": "kuya",
+    "text": "kuya"
+  },
+  "lakad.mp3": {
+    "word": "lakad",
+    "text": "lakad"
+  },
+  "laro.mp3": {
+    "word": "laro",
+    "text": "laro"
+  },
+  "lima.mp3": {
+    "word": "lima",
+    "text": "lima"
+  },
+  "lola.mp3": {
+    "word": "lola",
+    "text": "lola"
+  },
+  "lolo.mp3": {
+    "word": "lolo",
+    "text": "lolo"
+  },
+  "lumakad.mp3": {
+    "word": "lumakad",
+    "text": "lumakad"
+  },
+  "luto.mp3": {
+    "word": "luto",
+    "text": "luto"
+  },
+  "m.mp3": {
+    "word": "M",
+    "text": "em"
+  },
+  "ma.mp3": {
+    "word": "ma",
+    "text": "ma"
+  },
+  "mabait.mp3": {
+    "word": "mabait",
+    "text": "mabait"
+  },
+  "mag.mp3": {
+    "word": "mag",
+    "text": "mag"
+  },
+  "mag-aral.mp3": {
+    "word": "mag-aral",
+    "text": "mag-aral"
+  },
+  "maganda.mp3": {
+    "word": "maganda",
+    "text": "maganda"
+  },
+  "magkano.mp3": {
+    "word": "magkano",
+    "text": "magkano"
+  },
+  "maglakad.mp3": {
+    "word": "maglakad",
+    "text": "maglakad"
+  },
+  "maglaro.mp3": {
+    "word": "maglaro",
+    "text": "maglaro"
+  },
+  "magluto.mp3": {
+    "word": "magluto",
+    "text": "magluto"
+  },
+  "magtrabaho.mp3": {
+    "word": "magtrabaho",
+    "text": "magtrabaho"
+  },
+  "mainit.mp3": {
+    "word": "mainit",
+    "text": "mainit"
+  },
+  "malaki.mp3": {
+    "word": "malaki",
+    "text": "malaki"
+  },
+  "malamig.mp3": {
+    "word": "malamig",
+    "text": "malamig"
+  },
+  "maliit.mp3": {
+    "word": "maliit",
+    "text": "maliit"
+  },
+  "malungkot.mp3": {
+    "word": "malungkot",
+    "text": "malungkot"
+  },
+  "mansanas.mp3": {
+    "word": "mansanas",
+    "text": "mansanas"
+  },
+  "masaya.mp3": {
+    "word": "Masaya",
+    "text": "Masaya"
+  },
+  "matalino.mp3": {
+    "word": "matalino",
+    "text": "matalino"
+  },
+  "matanda.mp3": {
+    "word": "matanda",
+    "text": "matanda"
+  },
+  "mesa.mp3": {
+    "word": "mesa",
+    "text": "mesa"
+  },
+  "natutulog.mp3": {
+    "word": "Natutulog",
+    "text": "Natutulog"
+  },
+  "ng.mp3": {
+    "word": "NG",
+    "text": "NG"
+  },
+  "ngipin.mp3": {
+    "word": "ngipin",
+    "text": "ngipin"
+  },
+  "ngiti.mp3": {
+    "word": "ngiti",
+    "text": "ngiti"
+  },
+  "o.mp3": {
+    "word": "O",
+    "text": "oh"
+  },
+  "oo.mp3": {
+    "word": "oo",
+    "text": "o-oh"
+  },
+  "opo.mp3": {
+    "word": "opo",
+    "text": "opo"
+  },
+  "orasan.mp3": {
+    "word": "orasan",
+    "text": "orasan"
+  },
+  "oso.mp3": {
+    "word": "oso",
+    "text": "oso"
+  },
+  "paano.mp3": {
+    "word": "paano",
+    "text": "paano"
+  },
+  "pag.mp3": {
+    "word": "pag",
+    "text": "pag"
+  },
+  "pag-ibig.mp3": {
+    "word": "pag-ibig",
+    "text": "pag-ibig"
+  },
+  "pagkain.mp3": {
+    "word": "pagkain",
+    "text": "pagkain"
+  },
+  "pakikisama.mp3": {
+    "word": "pakikisama",
+    "text": "pakikisama"
+  },
+  "paligoy-ligoy.mp3": {
+    "word": "paligoy-ligoy",
+    "text": "paligoy-ligoy"
+  },
+  "paruparo.mp3": {
+    "word": "paruparo",
+    "text": "paruparo"
+  },
+  "patid.mp3": {
+    "word": "patid",
+    "text": "patid"
+  },
+  "pera.mp3": {
+    "word": "pera",
+    "text": "pera"
+  },
+  "pero.mp3": {
+    "word": "pero",
+    "text": "pero"
+  },
+  "pinto.mp3": {
+    "word": "pinto",
+    "text": "pinto"
+  },
+  "pito.mp3": {
+    "word": "pito",
+    "text": "pito"
+  },
+  "po.mp3": {
+    "word": "po",
+    "text": "po"
+  },
+  "pula.mp3": {
+    "word": "pula",
+    "text": "pula"
+  },
+  "puno.mp3": {
+    "word": "puno",
+    "text": "puno"
+  },
+  "puno_glottal.mp3": {
+    "word": "puno'",
+    "text": "poo-noh"
+  },
+  "punta.mp3": {
+    "word": "punta",
+    "text": "punta"
+  },
+  "pusa.mp3": {
+    "word": "pusa",
+    "text": "pusa"
+  },
+  "puti.mp3": {
+    "word": "puti",
+    "text": "puti"
+  },
+  "rehistro.mp3": {
+    "word": "rehistro",
+    "text": "rehistro"
+  },
+  "sa.mp3": {
+    "word": "sa",
+    "text": "sa"
+  },
+  "saan.mp3": {
+    "word": "saan",
+    "text": "saan"
+  },
+  "salamat.mp3": {
+    "word": "salamat",
+    "text": "salamat"
+  },
+  "sampu.mp3": {
+    "word": "sampu",
+    "text": "sampu"
+  },
+  "sanggol.mp3": {
+    "word": "sanggol",
+    "text": "sanggol"
+  },
+  "saya.mp3": {
+    "word": "saya",
+    "text": "saya"
+  },
+  "si.mp3": {
+    "word": "si",
+    "text": "si"
+  },
+  "sina.mp3": {
+    "word": "sina",
+    "text": "sina"
+  },
+  "sino.mp3": {
+    "word": "sino",
+    "text": "sino"
+  },
+  "siya.mp3": {
+    "word": "siya",
+    "text": "siya"
+  },
+  "siyam.mp3": {
+    "word": "siyam",
+    "text": "siyam"
+  },
+  "taglish.mp3": {
+    "word": "Taglish",
+    "text": "Taglish"
+  },
+  "takbo.mp3": {
+    "word": "takbo",
+    "text": "takbo"
+  },
+  "tatlo.mp3": {
+    "word": "tatlo",
+    "text": "tatlo"
+  },
+  "tayo.mp3": {
+    "word": "tayo",
+    "text": "tayo"
+  },
+  "telepono.mp3": {
+    "word": "telepono",
+    "text": "telepono"
+  },
+  "tingin.mp3": {
+    "word": "tingin",
+    "text": "tingin"
+  },
+  "tita.mp3": {
+    "word": "tita",
+    "text": "tita"
+  },
+  "tito.mp3": {
+    "word": "tito",
+    "text": "tito"
+  },
+  "trabaho.mp3": {
+    "word": "trabaho",
+    "text": "trabaho"
+  },
+  "tubig.mp3": {
+    "word": "tubig",
+    "text": "tubig"
+  },
+  "tulog.mp3": {
+    "word": "tulog",
+    "text": "tulog"
+  },
+  "tumakbo.mp3": {
+    "word": "tumakbo",
+    "text": "tumakbo"
+  },
+  "tumatakbo.mp3": {
+    "word": "Tumatakbo",
+    "text": "Tumatakbo"
+  },
+  "u.mp3": {
+    "word": "U",
+    "text": "ooh"
+  },
+  "ubas.mp3": {
+    "word": "ubas",
+    "text": "ubas"
+  },
+  "umaawit.mp3": {
+    "word": "Umaawit",
+    "text": "Umaawit"
+  },
+  "umiinom.mp3": {
+    "word": "Umiinom",
+    "text": "Umiinom"
+  },
+  "uminom.mp3": {
+    "word": "uminom",
+    "text": "uminom"
+  },
+  "walo.mp3": {
+    "word": "walo",
+    "text": "walo"
+  },
+  "diin.mp3": {
+    "word": "diin",
+    "text": "diin"
+  },
+  "labing-isa.mp3": {
+    "word": "Labing-isa",
+    "text": "Labing-isa"
+  },
+  "salitang-ugat.mp3": {
+    "word": "salitang-ugat",
+    "text": "salitang-ugat"
+  },
+  "ang_aso.mp3": {
+    "word": "ang aso",
+    "text": "ang aso"
+  },
+  "ang_bahay.mp3": {
+    "word": "ang bahay",
+    "text": "ang bahay"
+  },
+  "ang_bata.mp3": {
+    "word": "ang bata",
+    "text": "ang bata"
+  },
+  "ang_pusa.mp3": {
+    "word": "ang pusa",
+    "text": "ang pusa"
+  },
+  "ayaw_ko.mp3": {
+    "word": "Ayaw ko",
+    "text": "Ayaw ko"
+  },
+  "ayaw_makaabala.mp3": {
+    "word": "ayaw makaabala",
+    "text": "ayaw makaabala"
+  },
+  "baka.mp3": {
+    "word": "Baka...",
+    "text": "Baka..."
+  },
+  "filipino_time.mp3": {
+    "word": "Filipino time",
+    "text": "Filipino time"
+  },
+  "ganti_sa_kabutihan.mp3": {
+    "word": "ganti sa kabutihan",
+    "text": "ganti sa kabutihan"
+  },
+  "late_ako.mp3": {
+    "word": "Late ako",
+    "text": "Late ako"
+  },
+  "magsabi_ng_salamat.mp3": {
+    "word": "magsabi ng salamat",
+    "text": "magsabi ng salamat"
+  },
+  "mano_po.mp3": {
+    "word": "mano po",
+    "text": "mano po"
+  },
+  "nasa_daan_na.mp3": {
+    "word": "Nasa daan na",
+    "text": "Nasa daan na"
+  },
+  "ng_kanin.mp3": {
+    "word": "ng kanin",
+    "text": "ng kanin"
+  },
+  "ng_tubig.mp3": {
+    "word": "ng tubig",
+    "text": "ng tubig"
+  },
+  "sa_bahay.mp3": {
+    "word": "sa bahay",
+    "text": "sa bahay"
+  },
+  "sa_paaralan.mp3": {
+    "word": "sa paaralan",
+    "text": "sa paaralan"
+  },
+  "sa_palengke.mp3": {
+    "word": "sa palengke",
+    "text": "sa palengke"
+  },
+  "sa_parke.mp3": {
+    "word": "sa parke",
+    "text": "sa parke"
+  },
+  "salamat_po.mp3": {
+    "word": "salamat po",
+    "text": "salamat po"
+  },
+  "si_ben.mp3": {
+    "word": "Si Ben",
+    "text": "Si Ben"
+  },
+  "si_maria.mp3": {
+    "word": "Si Maria",
+    "text": "Si Maria"
+  },
+  "sina_ana_at_ben.mp3": {
+    "word": "Sina Ana at Ben",
+    "text": "Sina Ana at Ben"
+  },
+  "sumama_sa_grupo.mp3": {
+    "word": "sumama sa grupo",
+    "text": "sumama sa grupo"
+  },
+  "utang_na_loob.mp3": {
+    "word": "utang na loob",
+    "text": "utang na loob"
+  },
+  "ako_si_wika.mp3": {
+    "word": "Ako si Wika.",
+    "text": "Ako si Wika."
+  },
+  "ano_yan.mp3": {
+    "word": "Ano 'yan?",
+    "text": "Ano 'yan?"
+  },
+  "grabe_ang_saya.mp3": {
+    "word": "Grabe, ang saya!",
+    "text": "Grabe, ang saya!"
+  },
+  "inom_ng_tubig.mp3": {
+    "word": "Inom ng tubig.",
+    "text": "Inom ng tubig."
+  },
+  "isa_dalawa_tatlo.mp3": {
+    "word": "Isa, dalawa, tatlo.",
+    "text": "Isa, dalawa, tatlo."
+  },
+  "kain_tayo.mp3": {
+    "word": "Kain tayo!",
+    "text": "Kain tayo!"
+  },
+  "kumain_ang_aso.mp3": {
+    "word": "Kumain ang aso.",
+    "text": "Kumain ang aso."
+  },
+  "kumain_ang_bata_ng_kanin.mp3": {
+    "word": "Kumain ang bata ng kanin.",
+    "text": "Kumain ang bata ng kanin."
+  },
+  "kumain_si_ben_ng_kanin.mp3": {
+    "word": "Kumain si Ben ng kanin.",
+    "text": "Kumain si Ben ng kanin."
+  },
+  "kumain_si_jose.mp3": {
+    "word": "Kumain si Jose.",
+    "text": "Kumain si Jose."
+  },
+  "kumain_si_maria.mp3": {
+    "word": "Kumain si Maria.",
+    "text": "Kumain si Maria."
+  },
+  "kumakain_ang_bata.mp3": {
+    "word": "Kumakain ang bata.",
+    "text": "Kumakain ang bata."
+  },
+  "kumusta_po_kayo.mp3": {
+    "word": "Kumusta po kayo?",
+    "text": "Kumusta po kayo?"
+  },
+  "maganda_ang_araw.mp3": {
+    "word": "Maganda ang araw.",
+    "text": "Maganda ang araw."
+  },
+  "maganda_ang_bahay.mp3": {
+    "word": "Maganda ang bahay.",
+    "text": "Maganda ang bahay."
+  },
+  "maganda_ang_bulaklak.mp3": {
+    "word": "Maganda ang bulaklak.",
+    "text": "Maganda ang bulaklak."
+  },
+  "malaki_ang_bahay.mp3": {
+    "word": "Malaki ang bahay.",
+    "text": "Malaki ang bahay."
+  },
+  "masaya_si_ana.mp3": {
+    "word": "Masaya si Ana.",
+    "text": "Masaya si Ana."
+  },
+  "may_tubig_ba.mp3": {
+    "word": "May tubig ba?",
+    "text": "May tubig ba?"
+  },
+  "nasa_bahay_ang_aso.mp3": {
+    "word": "Nasa bahay ang aso.",
+    "text": "Nasa bahay ang aso."
+  },
+  "nasa_bahay_ang_pusa.mp3": {
+    "word": "Nasa bahay ang pusa.",
+    "text": "Nasa bahay ang pusa."
+  },
+  "nasa_bahay.mp3": {
+    "word": "Nasa bahay.",
+    "text": "Nasa bahay."
+  },
+  "nasa_daan_na_ako.mp3": {
+    "word": "Nasa daan na ako",
+    "text": "Nasa daan na ako"
+  },
+  "nasa_parke_ang_bata.mp3": {
+    "word": "Nasa parke ang bata.",
+    "text": "Nasa parke ang bata."
+  },
+  "natutulog_ang_pusa.mp3": {
+    "word": "Natutulog ang pusa.",
+    "text": "Natutulog ang pusa."
+  },
+  "oo_po.mp3": {
+    "word": "Oo po.",
+    "text": "Oo po."
+  },
+  "pulang_mansanas.mp3": {
+    "word": "Pulang mansanas.",
+    "text": "Pulang mansanas."
+  },
+  "pumunta_sa_palengke.mp3": {
+    "word": "Pumunta sa palengke.",
+    "text": "Pumunta sa palengke."
+  },
+  "pumunta_si_maria_sa_paaralan.mp3": {
+    "word": "Pumunta si Maria sa paaralan.",
+    "text": "Pumunta si Maria sa paaralan."
+  },
+  "pumunta_si_maria_sa_palengke.mp3": {
+    "word": "Pumunta si Maria sa palengke.",
+    "text": "Pumunta si Maria sa palengke."
+  },
+  "saan_ka_pupunta.mp3": {
+    "word": "Saan ka pupunta?",
+    "text": "Saan ka pupunta?"
+  },
+  "sampu_labing-isa_labindalawa.mp3": {
+    "word": "Sampu, labing-isa, labindalawa.",
+    "text": "Sampu, labing-isa, labindalawa."
+  },
+  "sige_i-text_kita.mp3": {
+    "word": "Sige, i-text kita",
+    "text": "Sige, i-text kita"
+  },
+  "tara_let_s_go.mp3": {
+    "word": "Tara, let's go!",
+    "text": "Tara, let's go!"
+  },
+  "tumatakbo_ang_aso.mp3": {
+    "word": "Tumatakbo ang aso.",
+    "text": "Tumatakbo ang aso."
+  },
+  "umiinom_ang_aso_ng_tubig.mp3": {
+    "word": "Umiinom ang aso ng tubig.",
+    "text": "Umiinom ang aso ng tubig."
+  },
+  "umiinom_ang_bata_ng_tubig.mp3": {
+    "word": "Umiinom ang bata ng tubig.",
+    "text": "Umiinom ang bata ng tubig."
+  },
+  "umiinom_ang_bata.mp3": {
+    "word": "Umiinom ang bata.",
+    "text": "Umiinom ang bata."
+  },
+  "ano_sino.mp3": {
+    "word": "Ano / Sino",
+    "text": "Ano, Sino"
+  },
+  "apat_lima_anim.mp3": {
+    "word": "Apat · Lima · Anim",
+    "text": "Apat, Lima, Anim"
+  },
+  "araw_elepante_isda_oso_ubas.mp3": {
+    "word": "araw · elepante · isda · oso · ubas",
+    "text": "araw, elepante, isda, oso, ubas"
+  },
+  "aso_pusa.mp3": {
+    "word": "Aso / Pusa",
+    "text": "Aso, Pusa"
+  },
+  "at_pero.mp3": {
+    "word": "At / Pero",
+    "text": "At, Pero"
+  },
+  "bahay_mesa_aso.mp3": {
+    "word": "bahay · mesa · aso",
+    "text": "bahay, mesa, aso"
+  },
+  "bakit_paano.mp3": {
+    "word": "Bakit / Paano",
+    "text": "Bakit, Paano"
+  },
+  "dilaw_berde.mp3": {
+    "word": "Dilaw / Berde",
+    "text": "Dilaw, Berde"
+  },
+  "isa_dalawa_tatlo_1.mp3": {
+    "word": "Isa · Dalawa · Tatlo",
+    "text": "Isa, Dalawa, Tatlo"
+  },
+  "itim_puti.mp3": {
+    "word": "Itim / Puti",
+    "text": "Itim, Puti"
+  },
+  "lakad_takbo.mp3": {
+    "word": "Lakad / Takbo",
+    "text": "Lakad, Takbo"
+  },
+  "mainit_malamig.mp3": {
+    "word": "Mainit / Malamig",
+    "text": "Mainit, Malamig"
+  },
+  "malaki_maliit.mp3": {
+    "word": "Malaki / Maliit",
+    "text": "Malaki, Maliit"
+  },
+  "ngipin_ngiti_ilong.mp3": {
+    "word": "ngipin · ngiti · ilong",
+    "text": "ngipin, ngiti, ilong"
+  },
+  "oo_hindi.mp3": {
+    "word": "Oo / Hindi",
+    "text": "Oo, Hindi"
+  },
+  "pito_walo_siyam.mp3": {
+    "word": "Pito · Walo · Siyam",
+    "text": "Pito, Walo, Siyam"
+  },
+  "pula_asul.mp3": {
+    "word": "Pula / Asul",
+    "text": "Pula, Asul"
+  },
+  "saan_kailan.mp3": {
+    "word": "Saan / Kailan",
+    "text": "Saan, Kailan"
+  }
+}
