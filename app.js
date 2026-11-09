@@ -148,8 +148,24 @@
   let solved = 0;
   let activeSlot = null;
 
+  /** Draw POOL_SIZE items with the three dialects evenly represented, so how OFTEN a
+   *  dialect turns up can't be read off deck sizes (Tagalog now has 35 entries to the
+   *  others' 25). Round-robins shuffled per-dialect decks, then shuffles the result so
+   *  the order itself gives nothing away either. */
   function drawPool() {
-    return shuffle(BOOTH_PHRASES.filter((p) => GAME_DIALECTS.includes(p.dialect))).slice(0, POOL_SIZE);
+    const decks = GAME_DIALECTS.map((d) => shuffle(BOOTH_PHRASES.filter((p) => p.dialect === d)));
+    const picked = [];
+    for (let i = 0; picked.length < POOL_SIZE; i++) {
+      let tookAny = false;
+      for (const deck of decks) {
+        if (i < deck.length && picked.length < POOL_SIZE) {
+          picked.push(deck[i]);
+          tookAny = true;
+        }
+      }
+      if (!tookAny) break; // every deck exhausted
+    }
+    return shuffle(picked);
   }
 
   function startGame() {

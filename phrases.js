@@ -1,6 +1,7 @@
 /**
  * Wika PH — Philippine Startup Week booth demo (2026-11-08).
- * 75 phrases, 25 each Tagalog/Cebuano/Ilocano, pulled verbatim from already-shipped,
+ * 85 phrases: 35 Tagalog (25 single words with audio + 10 multi-word, text-only),
+ * 25 each Cebuano/Ilocano, pulled verbatim from already-shipped,
  * already-reviewed Wika content (lesson "reviewer" stages for Tagalog/Cebuano; the
  * HQ course-editor for Ilocano, Stage 0 lessons 101001-103) — no new translation,
  * no new TTS. Mirrors src/boothDemo/boothPhrases.ts in the wika-frontend-expo repo
@@ -42,6 +43,23 @@ const BOOTH_PHRASES = [
   { id: 'tgl-23', dialect: 'tagalog', target: 'Pera', english: 'Money', audio: 'pera.mp3' },
   { id: 'tgl-24', dialect: 'tagalog', target: 'Diretso', english: 'Straight', audio: 'diretso.mp3' },
   { id: 'tgl-25', dialect: 'tagalog', target: 'Opo', english: 'Yes (polite)', audio: 'opo.mp3' },
+
+  // Tagalog — 10 multi-word entries, text-only (no recorded clip exists for a full
+  // phrase; the bucket is the single-word Stage-0 bank). Restored verbatim from the
+  // originally shipped set (see boothPhrases.reference.ts tgl-01..25) on 2026-11-09
+  // because an all-single-word Tagalog deck made phrase LENGTH a tell in Guess the
+  // Language: a visitor could score without reading a word. These are additions, not
+  // replacements, so all 25 single words keep their audio.
+  { id: 'tgl-26', dialect: 'tagalog', target: 'Maraming salamat', english: 'Thank you very much' },
+  { id: 'tgl-27', dialect: 'tagalog', target: 'Walang anuman', english: "You're welcome" },
+  { id: 'tgl-28', dialect: 'tagalog', target: 'Taga-saan ka?', english: 'Where are you from?' },
+  { id: 'tgl-29', dialect: 'tagalog', target: 'Magkano ito?', english: 'How much is this?' },
+  { id: 'tgl-30', dialect: 'tagalog', target: 'Magandang umaga po', english: 'Good morning (polite)' },
+  { id: 'tgl-31', dialect: 'tagalog', target: 'Ako si Juan.', english: 'I am Juan.' },
+  { id: 'tgl-32', dialect: 'tagalog', target: 'Anong oras na?', english: 'What time is it?' },
+  { id: 'tgl-33', dialect: 'tagalog', target: 'Lumiko sa kanan.', english: 'Turn right.' },
+  { id: 'tgl-34', dialect: 'tagalog', target: 'Isang kilo ng mangga.', english: 'One kilo of mangoes.' },
+  { id: 'tgl-35', dialect: 'tagalog', target: 'Pwede po bang tumawad?', english: 'Can I ask for a discount?' },
 
   // Cebuano — 25
   { id: 'ceb-01', dialect: 'cebuano', target: 'Maayong buntag', english: 'Good morning' },
