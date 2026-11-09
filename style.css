@@ -106,7 +106,17 @@ html, body {
   flex-direction: column;
   overflow: hidden;
 }
-.screen.active { display: flex; }
+.screen.active { display: flex; animation: screenIn 0.32s ease both; }
+
+@keyframes screenIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes mascotBob {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(-1.5deg); }
+}
 
 /* ── Home ─────────────────────────────────────────────────────────────── */
 #screen-home {
@@ -126,10 +136,12 @@ html, body {
   border-radius: 999px;
   box-shadow: 0 3px 0 var(--secondary-shadow);
   margin-bottom: 6px;
+  animation: btnRiseIn 0.4s ease both;
 }
 #screen-home img.mascot {
   width: 150px;
   filter: drop-shadow(0 12px 20px rgba(98, 65, 133, 0.25));
+  animation: mascotBob 3.2s ease-in-out infinite;
 }
 #screen-home h1 {
   color: var(--primary);
@@ -146,6 +158,17 @@ html, body {
   text-align: center;
 }
 .home-buttons { display: flex; flex-direction: column; gap: 16px; width: 100%; max-width: 420px; }
+.home-buttons .big-btn {
+  opacity: 0;
+  animation: btnRiseIn 0.4s ease both;
+}
+.home-buttons .big-btn:nth-child(1) { animation-delay: 0.1s; }
+.home-buttons .big-btn:nth-child(2) { animation-delay: 0.2s; }
+
+@keyframes btnRiseIn {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
 /* Chunky, pressable buttons — same recipe as the app's Button.jsx: a solid
    offset "shadow" border that collapses and the button drops 4px on press. */
@@ -163,7 +186,7 @@ html, body {
 }
 .big-btn.primary { background: var(--primary); border-color: var(--primary-shadow); }
 .big-btn.secondary { background: var(--secondary); border-color: var(--secondary-shadow); }
-.big-btn:active { transform: translateY(4px); border-bottom-width: 2px; margin-bottom: 4px; }
+.big-btn:active { transform: translateY(4px) scale(0.98); border-bottom-width: 2px; margin-bottom: 4px; }
 
 /* ── Translator ───────────────────────────────────────────────────────── */
 .dialect-tabs {
@@ -192,6 +215,10 @@ html, body {
   color: var(--primary);
   box-shadow: 0 3px 0 var(--primary-faint);
 }
+.dialect-tab {
+  transition: transform 0.08s ease, border-color 0.1s ease, background 0.1s ease;
+}
+.dialect-tab:active { transform: scale(0.94); }
 
 .phrase-list {
   flex: 1;
@@ -231,6 +258,13 @@ html, body {
 #screen-speak img.mascot {
   width: 190px;
   filter: drop-shadow(0 12px 20px rgba(98, 65, 133, 0.25));
+  animation: mascotTalk 0.6s ease;
+}
+@keyframes mascotTalk {
+  0% { transform: scale(0.85) rotate(0deg); }
+  35% { transform: scale(1.06) rotate(-3deg); }
+  60% { transform: scale(0.98) rotate(2deg); }
+  100% { transform: scale(1) rotate(0deg); }
 }
 .speech-bubble {
   position: relative;
@@ -241,6 +275,11 @@ html, body {
   text-align: center;
   background: #fff;
   box-shadow: 0 4px 0 var(--border);
+  animation: bubbleIn 0.35s cubic-bezier(0.2, 0.9, 0.3, 1.2) 0.15s both;
+}
+@keyframes bubbleIn {
+  from { opacity: 0; transform: scale(0.85) translateY(-6px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
 }
 .speech-bubble::before {
   content: '';
@@ -265,6 +304,39 @@ html, body {
   margin-top: 10px;
   font-size: 15px;
   color: var(--muted);
+}
+
+/* Small circular "play pronunciation" button, appended by app.js next to the
+   target text whenever a phrase has a real recorded clip. */
+.speaker-btn {
+  position: absolute;
+  top: -16px;
+  right: -16px;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 2px solid var(--secondary-shadow);
+  border-bottom-width: 4px;
+  background: var(--secondary);
+  color: #fff;
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  animation: speakerPulse 1.8s ease-in-out infinite;
+  transition: transform 0.08s ease, border-bottom-width 0.08s ease;
+}
+.speaker-btn:active {
+  transform: translateY(2px) scale(0.94);
+  border-bottom-width: 2px;
+  animation: none;
+}
+@keyframes speakerPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
 }
 
 /* ── Guess the Language ──────────────────────────────────────────────── */
@@ -292,6 +364,7 @@ html, body {
   max-width: 560px;
   width: 100%;
   margin-inline: auto;
+  perspective: 700px;
 }
 .tile {
   aspect-ratio: 1;
@@ -307,15 +380,36 @@ html, body {
   color: #C7C7C7;
   cursor: pointer;
   transition: transform 0.08s ease, border-bottom-width 0.08s ease;
+  opacity: 0;
+  animation: tilePopIn 0.3s ease both;
 }
+.tile:nth-child(1) { animation-delay: 0.02s; }
+.tile:nth-child(2) { animation-delay: 0.06s; }
+.tile:nth-child(3) { animation-delay: 0.1s; }
+.tile:nth-child(4) { animation-delay: 0.14s; }
+.tile:nth-child(5) { animation-delay: 0.18s; }
+.tile:nth-child(6) { animation-delay: 0.22s; }
+.tile:nth-child(7) { animation-delay: 0.26s; }
+.tile:nth-child(8) { animation-delay: 0.3s; }
 .tile.open {
+  opacity: 1;
   border-color: var(--primary-shadow);
   background: var(--primary);
   color: #fff;
   transform: translateY(3px);
   border-bottom-width: 2px;
+  animation: tileFlip 0.3s ease;
 }
-.tile.empty { visibility: hidden; }
+.tile.empty { visibility: hidden; animation: none; }
+
+@keyframes tilePopIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes tileFlip {
+  from { transform: translateY(3px) rotateY(90deg); }
+  to { transform: translateY(3px) rotateY(0deg); }
+}
 
 .answer-panel {
   padding: 0 20px 20px;
@@ -328,11 +422,13 @@ html, body {
   box-sizing: border-box;
 }
 .answer-phrase {
+  position: relative;
   border: 2px solid var(--primary);
   border-radius: 16px;
   background: var(--primary-faint);
   padding: 18px;
   text-align: center;
+  animation: bubbleIn 0.3s cubic-bezier(0.2, 0.9, 0.3, 1.2) both;
 }
 .answer-phrase .target { font-size: 20px; font-weight: 800; color: var(--primary); }
 .answer-phrase .gloss { margin-top: 6px; font-size: 14px; color: var(--muted); }
@@ -352,9 +448,32 @@ html, body {
   cursor: pointer;
   transition: transform 0.08s ease, border-bottom-width 0.08s ease;
 }
-.choice-btn.correct { border-color: var(--success-shadow); background: var(--success-light); color: var(--success); }
-.choice-btn.wrong { border-color: var(--error-shadow); background: var(--error-light); color: var(--error); }
+.choice-btn.correct {
+  border-color: var(--success-shadow);
+  background: var(--success-light);
+  color: var(--success);
+  animation: choiceCorrect 0.4s ease;
+}
+.choice-btn.wrong {
+  border-color: var(--error-shadow);
+  background: var(--error-light);
+  color: var(--error);
+  animation: choiceWrong 0.4s ease;
+}
 .choice-btn[disabled] { cursor: default; transform: translateY(3px); border-bottom-width: 2px; }
+
+@keyframes choiceCorrect {
+  0% { transform: translateY(3px) scale(1); }
+  40% { transform: translateY(3px) scale(1.08); }
+  100% { transform: translateY(3px) scale(1); }
+}
+@keyframes choiceWrong {
+  0%, 100% { transform: translateY(3px) translateX(0); }
+  20% { transform: translateY(3px) translateX(-6px); }
+  40% { transform: translateY(3px) translateX(6px); }
+  60% { transform: translateY(3px) translateX(-4px); }
+  80% { transform: translateY(3px) translateX(4px); }
+}
 
 .done-screen {
   flex: 1;
@@ -374,4 +493,18 @@ html, body {
   background: var(--primary-faint);
   padding: 16px 28px;
   border-radius: 20px;
+  animation: doneCelebrate 0.5s cubic-bezier(0.3, 1.5, 0.4, 1);
+}
+@keyframes doneCelebrate {
+  0% { opacity: 0; transform: scale(0.6) rotate(-6deg); }
+  60% { opacity: 1; transform: scale(1.08) rotate(2deg); }
+  100% { opacity: 1; transform: scale(1) rotate(0deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
 }
