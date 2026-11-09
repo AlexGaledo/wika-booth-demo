@@ -40,6 +40,31 @@
     return d ? d.label : id;
   }
 
+  /** Plays a phrase's real recorded clip, if it has one. Silent/no-op otherwise —
+   *  same "missing clip just means no audio" philosophy as the real app. */
+  function playClip(filename) {
+    if (!filename) return;
+    try {
+      const a = new Audio('audio/' + filename);
+      a.play().catch(() => {}); // autoplay can be blocked before any user gesture; fine, silent
+    } catch (e) {}
+  }
+
+  /** A small 🔊 button that replays `item.audio`, or null if there's no clip. */
+  function speakerButton(item) {
+    if (!item.audio) return null;
+    const btn = document.createElement('button');
+    btn.className = 'speaker-btn';
+    btn.type = 'button';
+    btn.setAttribute('aria-label', 'Play pronunciation');
+    btn.textContent = '🔊';
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      playClip(item.audio);
+    });
+    return btn;
+  }
+
   // ── navigation ───────────────────────────────────────────────────────────
   const screens = ['home', 'translator', 'speak', 'game'];
   let current = 'home';
@@ -104,9 +129,15 @@
   }
 
   function speak(phrase) {
-    document.getElementById('speak-target').textContent = phrase.target;
+    const targetEl = document.getElementById('speak-target');
+    targetEl.textContent = phrase.target;
     document.getElementById('speak-gloss').textContent = phrase.english;
+    const existing = targetEl.parentElement.querySelector('.speaker-btn');
+    if (existing) existing.remove();
+    const btn = speakerButton(phrase);
+    if (btn) targetEl.parentElement.appendChild(btn);
     showScreen('speak', { back: 'translator' });
+    if (phrase.audio) playClip(phrase.audio); // mascot "speaks" the real recording
   }
   document.getElementById('btn-speak-back').addEventListener('click', () => showScreen('translator'));
 
@@ -117,8 +148,24 @@
   let solved = 0;
   let activeSlot = null;
 
+  /** Draw POOL_SIZE items with the three dialects evenly represented, so how OFTEN a
+   *  dialect turns up can't be read off deck sizes (Tagalog now has 35 entries to the
+   *  others' 25). Round-robins shuffled per-dialect decks, then shuffles the result so
+   *  the order itself gives nothing away either. */
   function drawPool() {
-    return shuffle(BOOTH_PHRASES.filter((p) => GAME_DIALECTS.includes(p.dialect))).slice(0, POOL_SIZE);
+    const decks = GAME_DIALECTS.map((d) => shuffle(BOOTH_PHRASES.filter((p) => p.dialect === d)));
+    const picked = [];
+    for (let i = 0; picked.length < POOL_SIZE; i++) {
+      let tookAny = false;
+      for (const deck of decks) {
+        if (i < deck.length && picked.length < POOL_SIZE) {
+          picked.push(deck[i]);
+          tookAny = true;
+        }
+      }
+      if (!tookAny) break; // every deck exhausted
+    }
+    return shuffle(picked);
   }
 
   function startGame() {
@@ -165,9 +212,14 @@
     if (!tile) { panel.style.display = 'none'; return; }
 
     panel.style.display = 'flex';
-    document.getElementById('answer-target').textContent = tile.item.target;
+    const targetEl = document.getElementById('answer-target');
+    targetEl.textContent = tile.item.target;
     document.getElementById('answer-gloss').style.display = 'none';
     document.getElementById('answer-gloss').textContent = tile.item.english;
+    const existing = targetEl.parentElement.querySelector('.speaker-btn');
+    if (existing) existing.remove();
+    const btn = speakerButton(tile.item);
+    if (btn) targetEl.parentElement.appendChild(btn);
 
     const choicesEl = document.getElementById('answer-choices');
     choicesEl.innerHTML = '';

@@ -1,38 +1,65 @@
 /**
  * Wika PH — Philippine Startup Week booth demo (2026-11-08).
- * 75 phrases, 25 each Tagalog/Cebuano/Ilocano, pulled verbatim from already-shipped,
+ * 85 phrases: 35 Tagalog (25 single words with audio + 10 multi-word, text-only),
+ * 25 each Cebuano/Ilocano, pulled verbatim from already-shipped,
  * already-reviewed Wika content (lesson "reviewer" stages for Tagalog/Cebuano; the
  * HQ course-editor for Ilocano, Stage 0 lessons 101001-103) — no new translation,
  * no new TTS. Mirrors src/boothDemo/boothPhrases.ts in the wika-frontend-expo repo
  * at the time this was written, for whoever later wants it in the real app.
+ *
+ * Tagalog swapped to single words (2026-11-09) so each one can carry a real,
+ * verified recorded clip from the public wika-audio bucket (`audio/{audio}`,
+ * cross-referenced against audio/manifest.json — not generated, not guessed).
+ * Cebuano and Ilocano stay phrase-level and text-only: the bucket's clips are
+ * the Tagalog Stage-0 bank only, so attaching one under another dialect's label
+ * would mean playing the wrong language's recording — exactly the kind of
+ * mislabeling an Ilocano-fluent reviewer already flagged as a real accuracy
+ * problem for this app. No audio is better than wrong audio.
  */
 const BOOTH_PHRASES = [
-  // Tagalog — 25
-  { id: 'tgl-01', dialect: 'tagalog', target: 'Magandang umaga po', english: 'Good morning (polite)' },
-  { id: 'tgl-02', dialect: 'tagalog', target: 'Magandang hapon po', english: 'Good afternoon (polite)' },
-  { id: 'tgl-03', dialect: 'tagalog', target: 'Magandang gabi po', english: 'Good evening (polite)' },
-  { id: 'tgl-04', dialect: 'tagalog', target: 'Ako si Juan.', english: 'I am Juan.' },
-  { id: 'tgl-05', dialect: 'tagalog', target: 'Taga-saan ka?', english: 'Where are you from?' },
-  { id: 'tgl-06', dialect: 'tagalog', target: 'Taga-Pilipinas ako.', english: 'I am from the Philippines.' },
-  { id: 'tgl-07', dialect: 'tagalog', target: 'Salamat po.', english: 'Thank you (polite).' },
-  { id: 'tgl-08', dialect: 'tagalog', target: 'Maraming salamat', english: 'Thank you very much' },
-  { id: 'tgl-09', dialect: 'tagalog', target: 'Walang anuman', english: "You're welcome" },
-  { id: 'tgl-10', dialect: 'tagalog', target: 'Ingat po', english: 'Take care (polite)' },
-  { id: 'tgl-11', dialect: 'tagalog', target: 'Para po!', english: 'Stop, please!' },
-  { id: 'tgl-12', dialect: 'tagalog', target: 'Bayad po.', english: 'Here is the payment.' },
-  { id: 'tgl-13', dialect: 'tagalog', target: 'Sukli po.', english: 'Change, please.' },
-  { id: 'tgl-14', dialect: 'tagalog', target: 'Magkano ito?', english: 'How much is this?' },
-  { id: 'tgl-15', dialect: 'tagalog', target: 'Bili ako ng saging.', english: "I'm buying bananas." },
-  { id: 'tgl-16', dialect: 'tagalog', target: 'Isang kilo ng mangga.', english: 'One kilo of mangoes.' },
-  { id: 'tgl-17', dialect: 'tagalog', target: 'Pwede po bang tumawad?', english: 'Can I ask for a discount?' },
-  { id: 'tgl-18', dialect: 'tagalog', target: 'Ang nanay ko.', english: 'My mother.' },
-  { id: 'tgl-19', dialect: 'tagalog', target: 'Ang bahay ko.', english: 'My house.' },
-  { id: 'tgl-20', dialect: 'tagalog', target: 'Anong oras na?', english: 'What time is it?' },
-  { id: 'tgl-21', dialect: 'tagalog', target: 'Kain tayo!', english: "Let's eat!" },
-  { id: 'tgl-22', dialect: 'tagalog', target: 'Malapit lang ba?', english: 'Is it just near?' },
-  { id: 'tgl-23', dialect: 'tagalog', target: 'Lumiko sa kanan.', english: 'Turn right.' },
-  { id: 'tgl-24', dialect: 'tagalog', target: 'Diretso lang.', english: 'Go straight.' },
-  { id: 'tgl-25', dialect: 'tagalog', target: 'Ayos lang.', english: "It's okay." },
+  // Tagalog — 25, single words, each with a verified real clip (see `audio` field)
+  { id: 'tgl-01', dialect: 'tagalog', target: 'Kumusta', english: 'How are you / Hello', audio: 'kumusta.mp3' },
+  { id: 'tgl-02', dialect: 'tagalog', target: 'Salamat', english: 'Thank you', audio: 'salamat.mp3' },
+  { id: 'tgl-03', dialect: 'tagalog', target: 'Ikaw', english: 'You', audio: 'ikaw.mp3' },
+  { id: 'tgl-04', dialect: 'tagalog', target: 'Ako', english: 'I', audio: 'ako.mp3' },
+  { id: 'tgl-05', dialect: 'tagalog', target: 'Isa', english: 'One', audio: 'isa.mp3' },
+  { id: 'tgl-06', dialect: 'tagalog', target: 'Dalawa', english: 'Two', audio: 'dalawa.mp3' },
+  { id: 'tgl-07', dialect: 'tagalog', target: 'Tatlo', english: 'Three', audio: 'tatlo.mp3' },
+  { id: 'tgl-08', dialect: 'tagalog', target: 'Bahay', english: 'House', audio: 'bahay.mp3' },
+  { id: 'tgl-09', dialect: 'tagalog', target: 'Mesa', english: 'Table', audio: 'mesa.mp3' },
+  { id: 'tgl-10', dialect: 'tagalog', target: 'Kuya', english: 'Older brother', audio: 'kuya.mp3' },
+  { id: 'tgl-11', dialect: 'tagalog', target: 'Ate', english: 'Older sister', audio: 'ate.mp3' },
+  { id: 'tgl-12', dialect: 'tagalog', target: 'Araw', english: 'Day', audio: 'araw.mp3' },
+  { id: 'tgl-13', dialect: 'tagalog', target: 'Tubig', english: 'Water', audio: 'tubig.mp3' },
+  { id: 'tgl-14', dialect: 'tagalog', target: 'Pagkain', english: 'Food', audio: 'pagkain.mp3' },
+  { id: 'tgl-15', dialect: 'tagalog', target: 'Kumain', english: 'To eat', audio: 'kumain.mp3' },
+  { id: 'tgl-16', dialect: 'tagalog', target: 'Uminom', english: 'To drink', audio: 'uminom.mp3' },
+  { id: 'tgl-17', dialect: 'tagalog', target: 'Maganda', english: 'Beautiful', audio: 'maganda.mp3' },
+  { id: 'tgl-18', dialect: 'tagalog', target: 'Mainit', english: 'Hot', audio: 'mainit.mp3' },
+  { id: 'tgl-19', dialect: 'tagalog', target: 'Malamig', english: 'Cold', audio: 'malamig.mp3' },
+  { id: 'tgl-20', dialect: 'tagalog', target: 'Kailan', english: 'When', audio: 'kailan.mp3' },
+  { id: 'tgl-21', dialect: 'tagalog', target: 'Magkano', english: 'How much', audio: 'magkano.mp3' },
+  { id: 'tgl-22', dialect: 'tagalog', target: 'Kamatis', english: 'Tomato', audio: 'kamatis.mp3' },
+  { id: 'tgl-23', dialect: 'tagalog', target: 'Pera', english: 'Money', audio: 'pera.mp3' },
+  { id: 'tgl-24', dialect: 'tagalog', target: 'Diretso', english: 'Straight', audio: 'diretso.mp3' },
+  { id: 'tgl-25', dialect: 'tagalog', target: 'Opo', english: 'Yes (polite)', audio: 'opo.mp3' },
+
+  // Tagalog — 10 multi-word entries, text-only (no recorded clip exists for a full
+  // phrase; the bucket is the single-word Stage-0 bank). Restored verbatim from the
+  // originally shipped set (see boothPhrases.reference.ts tgl-01..25) on 2026-11-09
+  // because an all-single-word Tagalog deck made phrase LENGTH a tell in Guess the
+  // Language: a visitor could score without reading a word. These are additions, not
+  // replacements, so all 25 single words keep their audio.
+  { id: 'tgl-26', dialect: 'tagalog', target: 'Maraming salamat', english: 'Thank you very much' },
+  { id: 'tgl-27', dialect: 'tagalog', target: 'Walang anuman', english: "You're welcome" },
+  { id: 'tgl-28', dialect: 'tagalog', target: 'Taga-saan ka?', english: 'Where are you from?' },
+  { id: 'tgl-29', dialect: 'tagalog', target: 'Magkano ito?', english: 'How much is this?' },
+  { id: 'tgl-30', dialect: 'tagalog', target: 'Magandang umaga po', english: 'Good morning (polite)' },
+  { id: 'tgl-31', dialect: 'tagalog', target: 'Ako si Juan.', english: 'I am Juan.' },
+  { id: 'tgl-32', dialect: 'tagalog', target: 'Anong oras na?', english: 'What time is it?' },
+  { id: 'tgl-33', dialect: 'tagalog', target: 'Lumiko sa kanan.', english: 'Turn right.' },
+  { id: 'tgl-34', dialect: 'tagalog', target: 'Isang kilo ng mangga.', english: 'One kilo of mangoes.' },
+  { id: 'tgl-35', dialect: 'tagalog', target: 'Pwede po bang tumawad?', english: 'Can I ask for a discount?' },
 
   // Cebuano — 25
   { id: 'ceb-01', dialect: 'cebuano', target: 'Maayong buntag', english: 'Good morning' },
